@@ -146,9 +146,22 @@ function bootstrapwp_scripts() {
 	
 	wp_enqueue_style( 'google-heading', '//fonts.googleapis.com/css?family=Raleway:400,300,700');		
 
-	wp_enqueue_style( 'bootstrapwp-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'bootstrapwp-style', get_stylesheet_uri() );	
 
-	wp_enqueue_script( 'respond-js', get_template_directory_uri() . '/js/respond.min.js', array('jquery'), '1.4.2', true );
+	/**
+ * Add Respond.js for IE
+ */
+if( !function_exists('ie_scripts')) {
+	function ie_scripts() {
+	 	echo '<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->';
+	   	echo ' <!-- WARNING: Respond.js doesn\'t work if you view the page via file:// -->';
+	   	echo ' <!--[if lt IE 9]>';
+	    echo ' <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>';
+	    echo ' <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>';
+	   	echo ' <![endif]-->';
+   	}
+   	add_action('wp_head', 'ie_scripts');
+} // end if
 
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.2', true );
 

@@ -14,7 +14,7 @@
 
 		<div class="container footer-section">
 			<div class="row">
-				<h1 class="centered">THANKS FOR VISITING</h1>
+				<h1 class="centered" style="text-align: center;">THANKS FOR VISITING</h1>
 				<hr>
 			<div class="col-lg-4">
 			<?php dynamic_sidebar( 'footer-1' ); ?>
@@ -30,7 +30,7 @@
 
 	<div class="footerwrap">
 			<div class="container">
-				<h4>Created by <a href="http://braginteractive.com">Brad Williams</a> - &copy; <?php _e('Copyright', 'bootstrapwp'); ?> <?php echo date('Y'); ?></h4>
+				<h4 style="text-align: center;">Created by <a href="http://braginteractive.com">Brad Williams</a> - &copy; <?php _e('Copyright', 'bootstrapwp'); ?> <?php echo date('Y'); ?></h4>
 			</div>
 		</div>
 </footer><!-- #colophon -->

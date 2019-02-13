@@ -602,7 +602,7 @@ and Blueprint http://www.blueprintcss.org/
 	 }
 	 
 	 .pagewrap {
-			 background: url(../img/header_bg.jpg) no-repeat center top;
+			 background: url('/images/header_bg.jpg') no-repeat center top;
 			 margin-top: -50px;
 			 padding-top:120px;
 			 text-align:center;
@@ -685,6 +685,10 @@ and Blueprint http://www.blueprintcss.org/
 /*--------------------------------------------------------------
 9.0 Widgets
 --------------------------------------------------------------*/
+.widget-area {
+	 	margin: 1.5em 0 0;	
+}
+
 .widget {
 	margin: 0 0 1.5em;
 }

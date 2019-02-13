@@ -11,6 +11,12 @@
  */
 
 get_header(); ?>
+<div class="pagewrap">
+			<header>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	  		</header>	    
+	    </div><!-- /headerwrap -->
+
 <div class="container">
 <div class="row">
 	<section id="primary" class="col-md-9 col-lg-9">
