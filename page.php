@@ -18,7 +18,7 @@ if ( has_post_thumbnail() ) {
 }
 ?>
 
-<div class="pagewrap" style="background-image: url('<?php echo $bg_url[0]; ?>')'">
+<div class="pagewrap" style="background-image: url('<?php echo $bg_url[0]; ?>')">
 			<header>
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	  		</header>	    
