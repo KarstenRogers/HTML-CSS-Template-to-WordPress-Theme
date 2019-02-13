@@ -11,7 +11,14 @@
  */
 
 get_header(); ?>
-<div class="pagewrap">
+
+<?php 
+if ( has_post_thumbnail() ) {
+	$bg_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+}
+?>
+
+<div class="pagewrap" style="background-image: url('<?php echo $bg_url[0]; ?>')'">
 			<header>
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	  		</header>	    
