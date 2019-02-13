@@ -13,6 +13,12 @@
 
 get_header(); ?>
 
+<?php 
+if ( has_post_thumbnail() ) {
+	$bg_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+}
+?>
+
 <div class="container">
 <div class="row">
 	<div id="primary" class="col-lg-9 col-md-9">
