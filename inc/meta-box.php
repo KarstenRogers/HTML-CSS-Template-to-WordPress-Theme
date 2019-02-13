@@ -13,7 +13,7 @@
  */
 
 
-add_filter( 'rwmb_meta_boxes', 'your_prefix_register_meta_boxes' );
+add_filter( 'rwmb_meta_boxes', 'dwp_register_meta_boxes' );
 
 /**
  * Register meta boxes
@@ -24,16 +24,52 @@ add_filter( 'rwmb_meta_boxes', 'your_prefix_register_meta_boxes' );
  *
  * @return array
  */
-function your_prefix_register_meta_boxes( $meta_boxes ) {
+function dwp_register_meta_boxes( $meta_boxes ) {
 	/**
 	 * prefix of meta keys (optional)
 	 * Use underscore (_) at the beginning to make keys hidden
 	 * Alt.: You also can make prefix empty to disable it
 	 */
 	// Better has an underscore as last sign
-	$prefix = 'your_prefix_';
+	$prefix = 'dwp_';
 
-	// 1st meta box
+  // 1st meta box
+	$meta_boxes[] = array(
+		// Meta box id, UNIQUE per meta box. Optional since 4.1.5
+		'id'         => 'banner',
+
+		// Meta box title - Will appear at the drag and drop handle bar. Required.
+		'title'      => esc_html__( 'Title Banner', 'meta-box' ),
+
+		// Post types, accept custom post types as well - DEFAULT is 'post'. Can be array (multiple post types) or string (1 post type). Optional.
+		'post_types' => array( 'post', 'page' ),
+
+		// Where the meta box appear: normal (default), advanced, side. Optional.
+		'context'    => 'normal',
+
+		// Order of meta box: high (default), low. Optional.
+		'priority'   => 'high',
+
+		// Auto save: true, false (default). Optional.
+		'autosave'   => true,
+
+		// List of meta fields
+		'fields'     => array(
+
+			// TEXTAREA
+			array(
+				'name' => esc_html__( 'Banner Text', 'your-prefix' ),
+				'desc' => esc_html__( 'Text here to display text in banner', 'your-prefix' ),
+				'id'   => "{$prefix}banner_text",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 3,
+			),
+		),
+	);
+  
+  
+  // 1st meta box
 	$meta_boxes[] = array(
 		// Meta box id, UNIQUE per meta box. Optional since 4.1.5
 		'id'         => 'standard',
@@ -127,21 +163,6 @@ function your_prefix_register_meta_boxes( $meta_boxes ) {
 				'type' => 'textarea',
 				'cols' => 20,
 				'rows' => 3,
-			),
-		),
-		'validation' => array(
-			'rules'    => array(
-				"{$prefix}password" => array(
-					'required'  => true,
-					'minlength' => 7,
-				),
-			),
-			// optional override of default jquery.validate messages
-			'messages' => array(
-				"{$prefix}password" => array(
-					'required'  => esc_html__( 'Password is required', 'your-prefix' ),
-					'minlength' => esc_html__( 'Password must be at least 7 characters', 'your-prefix' ),
-				),
 			),
 		),
 	);
