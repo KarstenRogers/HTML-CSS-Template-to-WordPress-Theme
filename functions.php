@@ -121,6 +121,10 @@ function bootstrapwp_scripts() {
 	wp_enqueue_style( 'animate-styles', get_template_directory_uri() . '/css/animate-custom.css', array(), '3.3.2', 'all' );
 
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.3.0', 'all' );
+	
+	wp_enqueue_style( 'google-body', '//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic');
+	
+	wp_enqueue_style( 'google-heading', '//fonts.googleapis.com/css?family=Raleway:400,300,700');		
 
 	wp_enqueue_style( 'bootstrapwp-style', get_stylesheet_uri() );
 
