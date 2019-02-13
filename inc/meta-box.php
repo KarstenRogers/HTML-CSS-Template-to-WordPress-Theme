@@ -64,6 +64,14 @@ function dwp_register_meta_boxes( $meta_boxes ) {
 				'type' => 'textarea',
 				'cols' => 20,
 				'rows' => 3,
+      ),
+      
+      // IMAGE Advanced
+			array(
+        'name'             => __( 'Banner Background Image', 'meta-box' ),
+        'id'               => "{$prefix}banner_image",
+				'type'             => 'image_advanced',
+				'max_file_uploads' => 1,
 			),
 		),
 	);

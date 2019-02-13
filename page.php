@@ -12,30 +12,34 @@
 
 get_header(); ?>
 
-<?php 
-if ( has_post_thumbnail() ) {
-	$bg_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
-}
-?> 
+<?php $bg_img = rvmb_meta('dwp_banner_image', 'type=image');
 
-<div class="pagewrap" style="background-image: url('<?php echo $bg_url[0]; ?>')">
-			<header>
+		$bg_url = '';
 
+	if (count($bg_img) > '0') {
+		foreach ($bg_img as $img) {
+			$bg = "{$img['full_url']}";
+			$bg_url = "background-image: url('" . $bg . "');";
+			
+		}
+	}
+?>
+
+<div class="pagewrap" style="<?php echo $bg_url; ?>;">
+		<header>
 			<?php if (rwmb_meta('dwp_banner_text') != '') {
 				echo '<h1>';
 				echo rwmb_meta('dwp_banner_text');
 				echo '<h1>';
 			} else { 
 				 the_title( '<h1 class="entry-title">', '</h1>' ); 
-		} ?>
-	  		</header>	    
-			</div><!-- /headerwrap -->
-			
-			<?php echo $banner_text; ?>
+			} ?>
+	</header>	    
+</div><!-- /pagewrap -->
 
 <div class="container">
 <div class="row">
-	<section id="primary" class="col-md-9 col-lg-9">
+	<section id="primary" class="col-md-8 col-lg-8">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
