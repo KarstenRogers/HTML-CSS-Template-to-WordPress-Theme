@@ -19,7 +19,7 @@ get_header(); ?>
 	if (count($bg_img) > '0') {
 		foreach ($bg_img as $img) {
 			$bg = "{$img['full_url']}";
-			$bg_url = "background-image: url('" . $bg . "');";
+			$bg_url = "background-image: url('" . $bg . "');"
 			
 		}
 	}
