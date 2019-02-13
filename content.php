@@ -50,4 +50,3 @@
 	<footer class="entry-footer">
 		<?php edit_post_link( __( 'Edit', 'bootstrapwp' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
