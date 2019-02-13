@@ -236,3 +236,8 @@ require get_template_directory() . '/inc/search-highlight.php';
  * Plugin Activation
  */
 require get_template_directory() . '/inc/plugin-activation.php';
+
+/**
+ * Meta Boxes
+ */
+require get_template_directory() . '/inc/meta-box.php';
