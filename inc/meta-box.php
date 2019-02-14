@@ -74,6 +74,49 @@ function dwp_register_meta_boxes( $meta_boxes ) {
 				'max_file_uploads' => 1,
 			),
 		),
+  );
+  
+  // portfolio
+	$meta_boxes[] = array(
+		// Meta box id, UNIQUE per meta box. Optional since 4.1.5
+		'id'         => 'details',
+
+		// Meta box title - Will appear at the drag and drop handle bar. Required.
+		'title'      => esc_html__( 'Title Banner', 'meta-box' ),
+
+		// Post types, accept custom post types as well - DEFAULT is 'post'. Can be array (multiple post types) or string (1 post type). Optional.
+		'post_types' => array( 'post', 'page' ),
+
+		// Where the meta box appear: normal (default), advanced, side. Optional.
+		'context'    => 'normal',
+
+		// Order of meta box: high (default), low. Optional.
+		'priority'   => 'high',
+
+		// Auto save: true, false (default). Optional.
+		'autosave'   => true,
+
+		// List of meta fields
+		'fields'     => array(
+
+			// TEXTAREA
+			array(
+				'name' => esc_html__( 'detail Text', 'your-prefix' ),
+				'desc' => esc_html__( 'Text here to display text in banner', 'your-prefix' ),
+				'id'   => "{$prefix}detail_text",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 3,
+      ),
+      
+      // IMAGE Advanced
+			array(
+        'name'             => __( 'detail text', 'meta-box' ),
+        'id'               => "{$prefix}banner_image",
+				'type'             => 'image_advanced',
+				'max_file_uploads' => 1,
+			),
+		),
 	);
   
   
