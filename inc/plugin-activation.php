@@ -66,6 +66,12 @@ function bootstrapwp_register_required_plugins() {
 			'force_activation' => false,
 			'force_deactivation' => false, 
 			),
+
+			array(
+				'name'         => "Redux framework",
+				'slug'         => "redux-framework",
+				'required'     => true,
+				),
 	);
 
 	/*
