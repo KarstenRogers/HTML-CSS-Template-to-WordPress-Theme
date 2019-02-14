@@ -75,9 +75,9 @@ function bootstrapwp_register_required_plugins() {
 
 				// This is an example of how to include a plugin bundled with a theme.
 		array(
-			'name'               => 'Portfolio Post Type', // The plugin name.
-			'slug'               => 'portfolio-post-type', // The plugin slug (typically the folder name).
-			'source'             => get_stylesheet_directory() . '/plugins/portfolio-post-type.zip', // The plugin source.
+			'name'               => 'DiamondWP Portfolio Post Type', // The plugin name.
+			'slug'               => 'diamondwp-portfolio-post-type', // The plugin slug (typically the folder name).
+			'source'             => get_stylesheet_directory() . '/plugins/diamondwp-portfolio-post-type.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
 			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
