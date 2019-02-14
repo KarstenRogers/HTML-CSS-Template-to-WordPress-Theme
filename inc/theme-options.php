@@ -257,6 +257,28 @@
                   ),
                 )
             );
+
+            $this->sections[] = array(
+              'title'      => __( 'Portfolio', 'diamondwp' ),
+              'icon'     => 'el-icon-photo',
+              'fields'    => array(
+                  array( 
+                      'title'     => __( 'portfolio Title', 'diamondwp' ),
+                      'subtitle'  => __( 'Text for the portfolio title', 'diamondwp' ),
+                      'id'        => 'hp-portfolio-title',
+                      'default'   => 'Homepage portfolio Title',
+                      'type'      => 'text',
+                  ),
+
+                  array( 
+                    'title'     => __( 'portfolio image', 'diamondwp' ),
+                    'subtitle'  => __( 'image for Blog portfolio', 'diamondwp' ),
+                    'id'        => 'hp-portfolio-img',
+                    'type'      => 'media',
+                    'url'   => true ,
+                ),
+              )
+          );
                   
                 
             }

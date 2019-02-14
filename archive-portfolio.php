@@ -13,18 +13,6 @@
 
 get_header(); ?>
 
-<div class="pagewrap" style="background-image: url('<?php echo $bg_url[0]; ?>');">
-		<header>
-			<?php if (rwmb_meta('dwp_banner_text') != '') {
-				echo '<h1>';
-				echo rwmb_meta('dwp_banner_text');
-				echo '<h1>';
-			} else { 
-				 the_title( '<h1 class="entry-title">', '</h1>' ); 
-			} ?>
-	</header>	    
-</div><!-- /pagewrap -->
-
 <?php $bg_img = dwp_option('dwp_banner_img', false,  'url');
 
 $bg_url = '';
