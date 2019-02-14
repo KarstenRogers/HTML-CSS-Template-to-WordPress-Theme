@@ -247,3 +247,8 @@ require get_template_directory() . '/inc/meta-box.php';
  */
 require get_template_directory() . '/inc/theme-options.php';
 require get_template_directory() . '/inc/dwp-options.php';
+
+/**
+ * slider
+ */
+require get_template_directory() . '/inc/slider-portfolio.php';
