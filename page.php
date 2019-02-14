@@ -12,20 +12,13 @@
 
 get_header(); ?>
 
-<?php $bg_img = rvmb_meta('dwp_banner_image', 'type=image');
-
-		$bg_url = '';
-
-	if (count($bg_img) > '0') {
-		foreach ($bg_img as $img) {
-			$bg = "{$img['full_url']}";
-			$bg_url = "background-image: url('" . $bg . "');";
-			
-		}
-	}
+<?php 
+if ( has_post_thumbnail() ) {
+	$bg_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
+}
 ?>
 
-<div class="pagewrap" style="<?php echo $bg_url; ?>;">
+<div class="pagewrap" style="background-image: url('<?php echo $bg_url[0]; ?>');">
 		<header>
 			<?php if (rwmb_meta('dwp_banner_text') != '') {
 				echo '<h1>';

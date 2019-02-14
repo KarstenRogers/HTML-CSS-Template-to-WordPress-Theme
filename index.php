@@ -19,31 +19,6 @@ if ( has_post_thumbnail() ) {
 }
 ?>
 
-<?php $bg_img = rvmb_meta('dwp_banner_image', 'type=image');
-
-		$bg_url = '';
-
-	if (count($bg_img) > '0') {
-		foreach ($bg_img as $img) {
-			$bg = "{$img['full_url']}";
-			$bg_url = "background-image: url('" . $bg . "');";
-			
-		}
-	}
-?>
-
-<div class="pagewrap" style="<?php echo $bg_url; ?>;">
-		<header>
-			<?php if (rwmb_meta('dwp_banner_text') != '') {
-				echo '<h1>';
-				echo rwmb_meta('dwp_banner_text');
-				echo '<h1>';
-			} else { 
-				 the_title( '<h1 class="entry-title">', '</h1>' ); 
-			} ?>
-	</header>	    
-</div><!-- /pagewrap -->
-
 <div class="container">
 <div class="row">
 	<div id="primary" class="col-lg-9 col-md-9">
