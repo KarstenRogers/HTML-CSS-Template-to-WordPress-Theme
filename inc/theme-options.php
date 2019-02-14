@@ -253,7 +253,7 @@
                       'subtitle'  => __( 'image for Blog Banner', 'diamondwp' ),
                       'id'        => 'hp-banner-img',
                       'type'      => 'media',
-                      'url'   => true,
+                      'url'   => true ,
                   ),
                 )
             );
